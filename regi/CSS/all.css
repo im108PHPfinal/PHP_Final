@@ -1,0 +1,142 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+    outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*-------------------------------------------------------------------------------------------------------------*/
+.wrap{
+    width: 100%;
+    font-family: 'Quicksand', sans-serif,微軟正黑體;
+    color: #343338;
+    font-weight: 100;
+}
+.header{
+    margin-top: 40px;
+}
+.clear{
+    clear: both;
+}
+.user{
+    float: right;
+    font-size: 18px;
+    margin-right: 35px;
+}
+.menu{
+    margin-top: 40px;
+    width: 100%;
+    height: 60px;
+    background: #FF5468;
+    box-sizing: border-box;
+}
+.menu li{
+    width: 200px;
+    text-align: center;
+    list-style: none;
+    float: left;
+    color: #fff;
+    font-size: 20px;
+    line-height: 60px;
+    border-right: 1px solid #fff;
+}
+.member{
+    width: 200px;
+    text-align: center;
+    float: right;
+    color: #fff;
+    font-size: 20px;
+    height: 60px;
+    line-height: 60px;
+    border-left: 1px solid #fff;
+}
+.member a{
+    text-decoration: none;
+    color: #fff;
+}
+.member img{
+    margin-top: 5px;
+    margin-right: 5px;
+}
+.menu li:hover{
+     -webkit-transition: 0.5s;
+    background: #E5374B;
+}
+.content{
+    margin-top: 50px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    box-sizing: border-box;
+}
+.search{
+    width: 25vw;
+    min-width: 300px;
+    height: 22vw;
+    min-height: 260px;
+    border:1px solid #BEBEBE;
+    border-radius: 15px;
+    float: left;
+    margin-right: 6.9vw;
+    margin-left: 6.9vw;
+    padding: 30px;
+    box-sizing: border-box;
+}
+h2{
+    font-size: 22px;
+    color: #FF5468;
+    font-weight: 500;
+    float: left;
+    margin-right: 10px;
+}
+.search li{
+    list-style: none;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+.search input{
+    font-family: 'Quicksand', sans-serif,微軟正黑體;
+    color: #343338;
+}

@@ -1,0 +1,44 @@
+﻿<?php
+session_start();
+require_once("config.inc.php"); 
+$username = $_SESSION['username'];
+$row = $member->getUserinfoBn($username);
+?>
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+	<head>
+		<meta charset="UTF8">
+		<title>更新帳號資訊</title>
+	</head>
+
+	<body>
+		<h1 style="text-align: center;">更新帳號資訊</h1>
+		<div style="text-align: center;">
+		<?php if(isset($_SESSION['level'])):?>
+			<form method="post" action="updatec.php" name="reg">
+				<table style="text-align: center; width: 100px; margin-left: auto; margin-right: auto;" border="1" cellpadding="2" cellspacing="2">
+					<tbody>
+						<tr>
+							<td style="vertical-align: top;">
+								使用者:<input name="username" type="text" readonly="readonly" value="<?php echo $row['username'];?>"><br>
+								email:<input name="email" type="text" value="<?php echo $row['email'];?>"><br>
+								密碼:<input name="password" type="password"><br>
+								手機號碼:<input name="userphone" type="text" value="<?php echo $row['userphone'];?>"><br>
+								匯款銀行代碼:<input name="bank" type="text" value="<?php echo $row['bank'];?>">
+								<a href="http://web.thu.edu.tw/s932954/www/ruten/banklist.htm" target="_blank" title="銀行代碼一覽表">銀行代碼一覽表</a><br>
+								匯款銀行帳號:<input name="bankaccount" type="text" value="<?php echo $row['bankaccount'];?>"><br>
+								<input name="level" type="hidden" value="<?php echo $row['level'];?>"><br>
+								<input name="reg" value="更新" type="submit"><br>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		<?php else:?>
+			<span style="color:red;">您尚未登入！</span>
+		<?php endif;?>
+		</div>
+	</body>
+
+</html>
